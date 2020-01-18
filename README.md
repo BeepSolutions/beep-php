@@ -1,13 +1,5 @@
 # BeepPHP
 
-[![Build Status](https://travis-ci.org/sverraest/Beep-php.svg?branch=master)](https://travis-ci.org/sverraest/Beep-php)
-[![codecov](https://codecov.io/gh/sverraest/Beep-php/branch/master/graph/badge.svg)](https://codecov.io/gh/sverraest/Beep-php)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sverraest/Beep-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sverraest/Beep-php/?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/ef5f5dd14aeac02f0daf/maintainability)](https://codeclimate.com/github/sverraest/Beep-php/maintainability)
-[![Latest Stable Version](https://poser.pugx.org/sverraest/Beep-php/v/stable)](https://packagist.org/packages/sverraest/Beep-php)
-[![License](https://poser.pugx.org/sverraest/Beep-php/license)](https://packagist.org/packages/sverraest/Beep-php)
-[![composer.lock](https://poser.pugx.org/sverraest/Beep-php/composerlock)](https://packagist.org/packages/sverraest/Beep-php)
-
 > PHP API Client and bindings for the [Beep Solutions API](https://github.com/BeepPay/Beep-apidoc)
 
 Using this PHP API Client you can interact with your Beep Solutions:
@@ -28,7 +20,7 @@ $ curl -sS https://getcomposer.org/installer | php
 Next, install the latest Beep-php:
 
 ```
-$ php composer.phar require sverraest/Beep-php
+$ php composer.phar require BeepSolutions/Beep-php
 ```
 
 Finally, you need to require the library in your PHP application:
@@ -40,13 +32,13 @@ require "vendor/autoload.php";
 ## Development
 
 - Run `composer test` and `composer phpcs` before creating a PR to detect any obvious issues.
-- Please create issues for this specific API Binding under the [issues](https://github.com/sverraest/revolut-php/issues) section.
+- Please create issues for this specific API Binding under the [issues](https://github.com/BeepSolutions/beep-php/issues) section.
 - [Contact Beep Solutions](https://beep.solutions) directly for Beep Solutions API support.
 
 
 ## Quick Start
 ### BeepPHP\Client
-First get your `production` or `sandbox` API key from [Beep Solutions](https://app.beep.solutions/dashboard/apps).
+First get your `production` or `sandbox` API key from [Merchant Portal](https://dashboard.beep.solutions).
 
 If you want to get a `production` client:
 
@@ -112,8 +104,8 @@ use BeepPHP\Client;
 $client = new Client('apikey', 'appid');
 
 $json = [
- "currency" => "GBP",
- "amount" => 1000, // 10.00 GBP
+ "currency" => "SGD",
+ "amount" => 1000, // 10.00 SGD
  "redirectUrl" => "https://foo.bar/order/987" // Optional redirect after payment completion
 ];
 
@@ -123,7 +115,5 @@ header('Location: '. $transaction["url"]); // Go to payment method selection scr
 
 
 ## About
-
-➡️ You can follow me on 🐦 [Twitter](https://www.twitter.com/simondoestech) or ✉️ email me at simon[-at-]beep.solutions.
 
 ⭐ Sign up as a merchant at https://beep.solutions and start receiving payments in seconds.

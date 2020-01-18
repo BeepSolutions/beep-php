@@ -1,13 +1,5 @@
 # BeepPHP
 
-[![Build Status](https://travis-ci.org/sverraest/Beep-php.svg?branch=master)](https://travis-ci.org/sverraest/Beep-php)
-[![codecov](https://codecov.io/gh/sverraest/Beep-php/branch/master/graph/badge.svg)](https://codecov.io/gh/sverraest/Beep-php)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sverraest/Beep-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sverraest/Beep-php/?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/ef5f5dd14aeac02f0daf/maintainability)](https://codeclimate.com/github/sverraest/Beep-php/maintainability)
-[![Latest Stable Version](https://poser.pugx.org/sverraest/Beep-php/v/stable)](https://packagist.org/packages/sverraest/Beep-php)
-[![License](https://poser.pugx.org/sverraest/Beep-php/license)](https://packagist.org/packages/sverraest/Beep-php)
-[![composer.lock](https://poser.pugx.org/sverraest/Beep-php/composerlock)](https://packagist.org/packages/sverraest/Beep-php)
-
 > PHP API Client and bindings for the [Beep Solutions API](https://github.com/BeepPay/Beep-apidoc)
 
 Using this PHP API Client you can interact with your Beep Solutions:
@@ -123,7 +115,5 @@ header('Location: '. $transaction["url"]); // Go to payment method selection scr
 
 
 ## About
-
-➡️ You can follow me on 🐦 [Twitter](https://www.twitter.com/simondoestech) or ✉️ email me at simon[-at-]beep.solutions.
 
 ⭐ Sign up as a merchant at https://beep.solutions and start receiving payments in seconds.

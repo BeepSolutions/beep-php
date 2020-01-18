@@ -20,7 +20,7 @@ $ curl -sS https://getcomposer.org/installer | php
 Next, install the latest Beep-php:
 
 ```
-$ php composer.phar require sverraest/Beep-php
+$ php composer.phar require BeepSolutions/Beep-php
 ```
 
 Finally, you need to require the library in your PHP application:
@@ -32,13 +32,13 @@ require "vendor/autoload.php";
 ## Development
 
 - Run `composer test` and `composer phpcs` before creating a PR to detect any obvious issues.
-- Please create issues for this specific API Binding under the [issues](https://github.com/sverraest/revolut-php/issues) section.
+- Please create issues for this specific API Binding under the [issues](https://github.com/BeepSolutions/beep-php/issues) section.
 - [Contact Beep Solutions](https://beep.solutions) directly for Beep Solutions API support.
 
 
 ## Quick Start
 ### BeepPHP\Client
-First get your `production` or `sandbox` API key from [Beep Solutions](https://app.beep.solutions/dashboard/apps).
+First get your `production` or `sandbox` API key from [Merchant Portal](https://dashboard.beep.solutions).
 
 If you want to get a `production` client:
 
@@ -104,8 +104,8 @@ use BeepPHP\Client;
 $client = new Client('apikey', 'appid');
 
 $json = [
- "currency" => "GBP",
- "amount" => 1000, // 10.00 GBP
+ "currency" => "SGD",
+ "amount" => 1000, // 10.00 SGD
  "redirectUrl" => "https://foo.bar/order/987" // Optional redirect after payment completion
 ];
 

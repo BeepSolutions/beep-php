@@ -1,7 +1,7 @@
 {
-    "name": "sverraest/pomelo-php",
-    "description": "PHP Bindings for the Pomelo Pay API",
-    "keywords": ["pomelo", "pomelopay", "pay", "appfleet", "php", "api"],
+    "name": "BeepSolutions/beep-php",
+    "description": "PHP Bindings for the Beep API",
+    "keywords": ["beep", "beep solutions", "pay", "alipay", "php", "api", "brunei"],
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "~6.0",
@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PomeloPHP\\": ["src"]
+            "BeepPHP\\": ["src"]
         }
     },
     "require-dev": {
@@ -22,7 +22,7 @@
     "authors": [
         {
             "name": "Simon Verraest",
-            "email": "simon@appfleet.uk"
+            "email": "simon@beep.solutions"
         }
     ],
     "scripts": {

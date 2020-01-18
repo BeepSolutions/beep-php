@@ -10,7 +10,7 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="PomeloPHP Test Suite">
+        <testsuite name="BeepPHP Test Suite">
             <directory suffix=".php">./test/</directory>
         </testsuite>
     </testsuites>

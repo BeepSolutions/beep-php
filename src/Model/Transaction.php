@@ -1,5 +1,5 @@
 <?php
-namespace PomeloPHP\Model;
+namespace BeepPHP\Model;
 
 class Transaction
 {

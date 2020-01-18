@@ -1,17 +1,17 @@
 <?php
 
-namespace PomeloPHP;
+namespace BeepPHP;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Psr7\Response;
 
 class Client
 {
-    const POMELO_API_VERSION = '2.0';
-    const POMELO_APP_VERSION = 'pomelo-php';
-    const POMELO_SIGN_METHOD = 'sha1';
-    const POMELO_SANDBOX_ENDPOINT = 'https://api.sandbox.pomelopay.com/';
-    const POMELO_PRODUCTION_ENDPOINT = 'https://api.pomelopay.com/';
+    const Beep_API_VERSION = '2.0';
+    const Beep_APP_VERSION = 'beep-php';
+    const Beep_SIGN_METHOD = 'sha1';
+    const Beep_SANDBOX_ENDPOINT = 'https://api.uat.beep.solutions/';
+    const Beep_PRODUCTION_ENDPOINT = 'https://api.beep.solutions/';
 
     /**
      * @var \GuzzleHttp\Client
@@ -61,7 +61,7 @@ class Client
         $this->apiKey = $apiKey;
         $this->appId = $appId;
         $this->mode = $mode;
-        $this->baseUrl = ($mode === 'production' ? self::POMELO_PRODUCTION_ENDPOINT : self::POMELO_SANDBOX_ENDPOINT);
+        $this->baseUrl = ($mode === 'production' ? self::Beep_PRODUCTION_ENDPOINT : self::Beep_SANDBOX_ENDPOINT);
         $this->clientOptions = $clientOptions;
 
         $this->initiateHttpClient();
@@ -118,9 +118,9 @@ class Client
      */
     public function post($endpoint, $json)
     {
-        $json['apiVersion'] = self::POMELO_API_VERSION;
-        $json['appVersion'] = self::POMELO_APP_VERSION;
-        $json['signMethod'] = self::POMELO_SIGN_METHOD;
+        $json['apiVersion'] = self::Beep_API_VERSION;
+        $json['appVersion'] = self::Beep_APP_VERSION;
+        $json['signMethod'] = self::Beep_SIGN_METHOD;
 
         $response = $this->httpClient->request('POST', $this->buildBaseUrl().$endpoint, ['json' => $json]);
         return $this->handleResponse($response);

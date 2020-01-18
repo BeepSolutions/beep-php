@@ -1,7 +1,7 @@
 <?php
-namespace PomeloPHP\Crypt;
+namespace BeepPHP\Crypt;
 
-use PomeloPHP\Model\Transaction;
+use BeepPHP\Model\Transaction;
 
 class Signature
 {

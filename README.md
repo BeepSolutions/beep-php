@@ -93,10 +93,12 @@ $json = [
 ];
 
 $transaction = $client->transactions->create($json);
-header('Location: '. $transaction["url"]); // Go to transaction payment page
+header('Location: '. $transaction["url"]); // Go to transaction payment page for e-commerce or use the qrcode to display on external screens
 ```
 
 #### Create transaction without a payment method that will redirect to the payment method selection screen
+
+This method is only available for e-commerce enabled transactions
 
 ```php
 use BeepPHP\Client;
@@ -112,6 +114,32 @@ $json = [
 $transaction = $client->transactions->create($json);
 header('Location: '. $transaction["url"]); // Go to payment method selection screen
 ```
+
+
+#### Get a list of transactions
+
+This method is only available for e-commerce enabled transactions
+
+```php
+use BeepPHP\Client;
+
+$client = new Client('apikey', 'appid');
+
+$transactions = $client->transactions->list(['page' => 2]); // get the second page of transactions
+```
+
+#### Get a single transaction
+
+This method is only available for e-commerce enabled transactions
+
+```php
+use BeepPHP\Client;
+
+$client = new Client('apikey', 'appid');
+
+$transactions = $client->transactions->get('12356'); // get the transaction with id 123456
+```
+
 
 
 ## About

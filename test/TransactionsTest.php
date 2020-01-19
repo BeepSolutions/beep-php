@@ -12,4 +12,3 @@ class TransactionsTest extends PHPUnit_Framework_TestCase
 
     }
 }
-

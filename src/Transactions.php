@@ -26,12 +26,29 @@ class Transactions
     /**
      * @param array $json
      * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function create(array $json)
     {
         $transaction = (new Transaction())->fromArray($json);
         $json['signature'] = (new Signature($transaction, $this->client->getApiKey()))->sign();
         return $this->client->post(self::ENDPOINT, $json);
+    }
+
+    /**
+     * @param string $id
+     * @return mixed
+     */
+    public function get(string $id)
+    {
+        return $this->client->get(self::ENDPOINT.'/'.$id);
+    }
+
+    /**
+     * @param array $params
+     * @return mixed
+     */
+    public function list(array $params)
+    {
+        return $this->client->get(self::ENDPOINT, $params);
     }
 }

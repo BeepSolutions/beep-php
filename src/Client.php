@@ -10,8 +10,8 @@ class Client
     const Beep_API_VERSION = '2.0';
     const Beep_APP_VERSION = 'beep-php';
     const Beep_SIGN_METHOD = 'sha1';
-    const Beep_SANDBOX_ENDPOINT = 'https://api.uat.beep.solutions/';
-    const Beep_PRODUCTION_ENDPOINT = 'https://api.beep.solutions/';
+    const Beep_SANDBOX_ENDPOINT = 'https://api.uat.beep.solutions/public/';
+    const Beep_PRODUCTION_ENDPOINT = 'https://api.beep.solutions/public/';
 
     /**
      * @var \GuzzleHttp\Client

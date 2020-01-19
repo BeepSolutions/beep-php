@@ -20,7 +20,7 @@ $ curl -sS https://getcomposer.org/installer | php
 Next, install the latest Beep-php:
 
 ```
-$ php composer.phar require BeepSolutions/Beep-php
+$ php composer.phar require beepsolutions/beep-php
 ```
 
 Finally, you need to require the library in your PHP application:
@@ -38,7 +38,7 @@ require "vendor/autoload.php";
 
 ## Quick Start
 ### BeepPHP\Client
-First get your `production` or `sandbox` API key from [Merchant Portal](https://dashboard.beep.solutions).
+First get your `production` or `sandbox` API key from your [Merchant Portal](https://dashboard.beep.solutions).
 
 If you want to get a `production` client:
 

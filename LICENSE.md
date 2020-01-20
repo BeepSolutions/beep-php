@@ -1,13 +1,13 @@
 # License
 
-BeepPHP is licensed under MIT License.
+BMLConnect is licensed under MIT License.
 
-Beep Solutions and its brand and all products are Copyright (c) 2020 Beep Solutions..
-Please see [https://beep.solutions/](https://beep.solutions/) for more information about Beep Solutions.
+BANK OF MALDIVES and its brand and all products are Copyright (c) 2020 BANK OF MALDIVES
+Please see [https://dashboard.merchants.bankofmaldives.com.mv/](https://dashboard.merchants.bankofmaldives.com.mv/) for more information about BML.
 
 ## The MIT License
 
-Copyright (c) 2020 Beep Solutions.
+Copyright (c) 2020 Bank of Maldives.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,15 +1,15 @@
-# BeepPHP
+# BMLConnect
 
-> PHP API Client and bindings for the [Beep Solutions API](https://github.com/BeepPay/Beep-apidoc)
+> PHP API Client and bindings for the [Bank of Maldives Connect API](https://github.com/Bank of Maldives Connect APIPay/Bank of Maldives Connect API-apidoc)
 
-Using this PHP API Client you can interact with your Beep Solutions:
+Using this PHP API Client you can interact with your Bank of Maldives Connect API Solutions:
 - 💳 __Transactions__
 
 ## Installation
 
 Requires PHP 7.0 or higher
 
-The recommended way to install Beep-php is through [Composer](https://getcomposer.org):
+The recommended way to install bml-connect-php is through [Composer](https://getcomposer.org):
 
 First, install Composer:
 
@@ -17,10 +17,10 @@ First, install Composer:
 $ curl -sS https://getcomposer.org/installer | php
 ```
 
-Next, install the latest Beep-php:
+Next, install the latest bml-connect-php:
 
 ```
-$ php composer.phar require BeepSolutions/Beep-php
+$ php composer.phar require bankofmaldives/bml-connect-php
 ```
 
 Finally, you need to require the library in your PHP application:
@@ -32,18 +32,18 @@ require "vendor/autoload.php";
 ## Development
 
 - Run `composer test` and `composer phpcs` before creating a PR to detect any obvious issues.
-- Please create issues for this specific API Binding under the [issues](https://github.com/BeepSolutions/beep-php/issues) section.
-- [Contact Beep Solutions](https://beep.solutions) directly for Beep Solutions API support.
+- Please create issues for this specific API Binding under the [issues](https://github.com/bankofmaldives/bml-connect-php/issues) section.
+- [Contact Bank of Maldives Connect API Solutions](https://dashboard.merchants.bankofmaldives.com.mv) directly for Bank of Maldives Connect API support.
 
 
 ## Quick Start
-### BeepPHP\Client
-First get your `production` or `sandbox` API key from [Merchant Portal](https://dashboard.beep.solutions).
+### BMLConnect\Client
+First get your `production` or `sandbox` API key from [Merchant Portal](https://dashboard.merchants.bankofmaldives.com.mv).
 
 If you want to get a `production` client:
 
 ```php
-use BeepPHP\Client;
+use BMLConnect\Client;
 
 $client = new Client('apikey', 'appid');
 ```
@@ -51,7 +51,7 @@ $client = new Client('apikey', 'appid');
 If you want to get a `sandbox` client:
 
 ```php
-use BeepPHP\Client;
+use BMLConnect\Client;
 
 $client = new Client('apikey', 'appid', 'sandbox');
 ```
@@ -59,7 +59,7 @@ $client = new Client('apikey', 'appid', 'sandbox');
 If you want to pass additional [GuzzleHTTP](https://github.com/guzzle/guzzle) options:
 
 ```php
-use BeepPHP\Client;
+use BMLConnect\Client;
 
 $options = ['headers' => ['foo' => 'bar']];
 $client = new Client('apikey', 'appid', 'sandbox', $options);
@@ -67,7 +67,7 @@ $client = new Client('apikey', 'appid', 'sandbox', $options);
 
 ## Available API Operations
 
-The following exposed API operations from the Beep Solutions API are available using the API Client.
+The following exposed API operations from the Bank of Maldives Connect API are available using the API Client.
 
 See below for more details about each resource.
 
@@ -81,14 +81,14 @@ Create a new transaction with or without a specific payment method.
 #### Create transaction with a specific payment method
 
 ```php
-use BeepPHP\Client;
+use BMLConnect\Client;
 
 $client = new Client('apikey', 'appid');
 
 $json = [
  "provider" => "alipay", // Payment method enabled for your merchant account such as bcmc, alipay, card
- "currency" => "GBP",
- "amount" => 1000, // 10.00 GBP
+ "currency" => "MVR",
+ "amount" => 1000, // 10.00 MVR
  "redirectUrl" => "https://foo.bar/order/123" // Optional redirect after payment completion
 ];
 
@@ -99,13 +99,13 @@ header('Location: '. $transaction["url"]); // Go to transaction payment page
 #### Create transaction without a payment method that will redirect to the payment method selection screen
 
 ```php
-use BeepPHP\Client;
+use BMLConnect\Client;
 
 $client = new Client('apikey', 'appid');
 
 $json = [
- "currency" => "SGD",
- "amount" => 1000, // 10.00 SGD
+ "currency" => "MVR",
+ "amount" => 1000, // 10.00 MVR
  "redirectUrl" => "https://foo.bar/order/987" // Optional redirect after payment completion
 ];
 
@@ -116,4 +116,4 @@ header('Location: '. $transaction["url"]); // Go to payment method selection scr
 
 ## About
 
-⭐ Sign up as a merchant at https://beep.solutions and start receiving payments in seconds.
+⭐ Sign up as a merchant at https://dashboard.merchants.bankofmaldives.com.mv and start receiving payments in seconds.

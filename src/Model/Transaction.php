@@ -1,5 +1,5 @@
 <?php
-namespace BeepPHP\Model;
+namespace BMLConnect\Model;
 
 class Transaction
 {

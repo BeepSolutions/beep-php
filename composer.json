@@ -1,7 +1,7 @@
 {
-    "name": "beepsolutions/beep-php",
-    "description": "PHP Bindings for the Beep API",
-    "keywords": ["beep", "beep solutions", "pay", "alipay", "php", "api", "brunei"],
+    "name": "bankofmaldives/bml-connect-php",
+    "description": "PHP Bindings for the BML Connect API",
+    "keywords": ["bml", "bankofmaldives", "pay", "alipay", "php", "api", "maldives", "card payments"],
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "~6.0",
@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BeepPHP\\": ["src"]
+            "BMLConnect\\": ["src"]
         }
     },
     "require-dev": {

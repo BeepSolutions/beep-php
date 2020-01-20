@@ -1,7 +1,7 @@
 <?php
-namespace BeepPHP\Crypt;
+namespace BMLConnect\Crypt;
 
-use BeepPHP\Model\Transaction;
+use BMLConnect\Model\Transaction;
 
 class Signature
 {

@@ -10,17 +10,17 @@ class ClientTest extends PHPUnit_Framework_TestCase
 {
     public function testClientEndpoint()
     {
-        $client = new BeepPHP\Client('foo', 'bar');
+        $client = new BMLConnect\Client('foo', 'bar');
 
         $this->assertEquals(
-            $client::Beep_PRODUCTION_ENDPOINT,
+            $client::BML_PRODUCTION_ENDPOINT,
             PHPUnit_Framework_Assert::readAttribute($client, "baseUrl")
         );
 
-        $client = new BeepPHP\Client('foo', 'bar', 'sandbox');
+        $client = new BMLConnect\Client('foo', 'bar', 'sandbox');
 
         $this->assertEquals(
-            $client::Beep_SANDBOX_ENDPOINT,
+            $client::BML_SANDBOX_ENDPOINT,
             PHPUnit_Framework_Assert::readAttribute($client, "baseUrl")
         );
 
@@ -35,7 +35,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $stack = HandlerStack::create($mock);
         $stack->push($history);
         $http_client = new Client(['handler' => $stack]);
-        $client = new BeepPHP\Client('foo' , 'bar');
+        $client = new BMLConnect\Client('foo' , 'bar');
         $client->setClient($http_client);
 
         $client->transactions->create(['foo' => 'bar', 'amount' => 123, 'currency' => 'EUR']);

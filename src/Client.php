@@ -1,17 +1,17 @@
 <?php
 
-namespace BeepPHP;
+namespace BMLConnect;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Psr7\Response;
 
 class Client
 {
-    const Beep_API_VERSION = '2.0';
-    const Beep_APP_VERSION = 'beep-php';
-    const Beep_SIGN_METHOD = 'sha1';
-    const Beep_SANDBOX_ENDPOINT = 'https://api.uat.beep.solutions/public/';
-    const Beep_PRODUCTION_ENDPOINT = 'https://api.beep.solutions/public/';
+    const BML_API_VERSION = '2.0';
+    const BML_APP_VERSION = 'bml-connect-php';
+    const BML_SIGN_METHOD = 'sha1';
+    const BML_SANDBOX_ENDPOINT = 'https://api.uat.merchants.bankofmaldives.com.mv/public/';
+    const BML_PRODUCTION_ENDPOINT = 'https://api.merchants.bankofmaldives.com.mv/public/';
 
     /**
      * @var \GuzzleHttp\Client
@@ -61,7 +61,7 @@ class Client
         $this->apiKey = $apiKey;
         $this->appId = $appId;
         $this->mode = $mode;
-        $this->baseUrl = ($mode === 'production' ? self::Beep_PRODUCTION_ENDPOINT : self::Beep_SANDBOX_ENDPOINT);
+        $this->baseUrl = ($mode === 'production' ? self::BML_PRODUCTION_ENDPOINT : self::BML_SANDBOX_ENDPOINT);
         $this->clientOptions = $clientOptions;
 
         $this->initiateHttpClient();
@@ -118,9 +118,9 @@ class Client
      */
     public function post($endpoint, $json)
     {
-        $json['apiVersion'] = self::Beep_API_VERSION;
-        $json['appVersion'] = self::Beep_APP_VERSION;
-        $json['signMethod'] = self::Beep_SIGN_METHOD;
+        $json['apiVersion'] = self::BML_API_VERSION;
+        $json['appVersion'] = self::BML_APP_VERSION;
+        $json['signMethod'] = self::BML_SIGN_METHOD;
 
         $response = $this->httpClient->request('POST', $this->buildBaseUrl().$endpoint, ['json' => $json]);
         return $this->handleResponse($response);

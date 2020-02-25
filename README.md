@@ -1,6 +1,6 @@
 # BeepPHP
 
-> PHP API Client and bindings for the [Beep Solutions API](https://github.com/BeepPay/Beep-apidoc)
+> PHP API Client and bindings for the [Beep Solutions API](https://github.com/BeepSolutions/Beep-Solutions)
 
 Using this PHP API Client you can interact with your Beep Solutions:
 - 💳 __Transactions__
